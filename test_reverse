@@ -1,0 +1,17 @@
+import pytest
+
+import reverse_para_test as s
+
+
+@pytest.mark.parametrize(
+    "input_a, expected",
+    [
+        (123, 321),
+        (987, 789),
+        (12, 21),
+        (1234, 4321),
+        (12345, 54321),
+    ]
+)
+def test_reverse(input_a, expected):
+    assert s.reverse(input_a) == expected
