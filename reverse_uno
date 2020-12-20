@@ -1,0 +1,11 @@
+def reverse(a):
+    reve = 0
+    b = int(a)
+    for _ in str(a):
+        reve = (reve + (b % 10)) * 10
+        b = int(b / 10)
+    return int(reve / 10)
+
+
+numero = input("Enter a number: ")
+print(reverse(numero))
